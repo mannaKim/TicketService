@@ -1,6 +1,7 @@
 package com.team2.ticket.controller;
 
 import com.team2.ticket.controller.action.Action;
+import com.team2.ticket.controller.action.IndexAction;
 
 public class ActionFactory {
 	
@@ -13,7 +14,7 @@ public class ActionFactory {
 	public Action getAction(String command) {
 		Action ac = null;
 		
-		
+		if(command.equals("index")) ac = new IndexAction();
 		
 		return ac;
 	}
