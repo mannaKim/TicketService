@@ -8,13 +8,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.team2.ticket.controller.action.Action;
 
-public class LoginFormAction implements Action {
+public class IdCheckFormAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "member/login.jsp";
-		request.setAttribute("msg", request.getParameter("msg"));
-		request.getRequestDispatcher(url).forward(request, response);
+		
+
 	}
 
 }

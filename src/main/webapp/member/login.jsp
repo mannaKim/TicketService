@@ -7,11 +7,11 @@
 		<fieldset>
         	<label>User ID</label><input type="text" name="id"><br>
         	<label>Password</label><input type="password" name="pwd"><br>
-        	<div>${msg}</div>
+        	<div>${message}</div>
     	</fieldset>
     	
     	<div id="buttons">
-      		<input type="submit" value="Login" class="submit" onClick="return loginCheck()">
+      		<input type="submit" value="Login" class="submit" onClick="return loginCheck();">
     	</div>
     	<ul>
     		<li><a href="#" onClick="">아이디 찾기</a></li>

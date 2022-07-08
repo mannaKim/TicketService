@@ -29,7 +29,7 @@
 						</c:when>
 						<c:otherwise>
 							<li>${loginUser.name}(${loginUser.id})</li>
-							<li><a href="ticket.do?command=">LOGOUT</a></li>
+							<li><a href="ticket.do?command=logout">LOGOUT</a></li>
 							<li><a href="ticket.do?command=">MyPage</a></li>
 						</c:otherwise>
 					</c:choose>
@@ -42,7 +42,7 @@
 					<li><a href="ticket.do?command=">전시소개</a></li>
 					<li><a href="ticket.do?command=">전시예약</a></li>
 					<li><a href="ticket.do?command=">전시후기</a></li>
-					<li><a href="ticket.do?command=">굿즈</a></li>
+					<li><a href="ticket.do?command=goods">굿즈</a></li>
 					<li><a href="ticket.do?command=">Q &amp; A</a></li>
 				</ul>
 			</nav>

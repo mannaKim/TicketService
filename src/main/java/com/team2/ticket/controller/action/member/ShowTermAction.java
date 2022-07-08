@@ -8,12 +8,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.team2.ticket.controller.action.Action;
 
-public class LoginFormAction implements Action {
+public class ShowTermAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "member/login.jsp";
-		request.setAttribute("msg", request.getParameter("msg"));
+		request.setAttribute("num",request.getParameter("num"));
+		String url ="member/termView.jsp";
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 

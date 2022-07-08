@@ -17,11 +17,5 @@
 					로고<!-- 로고 이미지가 들어갈 자리 -->
 				</a>
 			</div>
-			
-			<span>로그인<span>
-			
-			<!-- 회원가입 -->
-			<div>
-				<a href="ticket.do?command=termsAndConditions">회원가입</a>
-			</div>
+			<span>회원가입<span>
 		</header>

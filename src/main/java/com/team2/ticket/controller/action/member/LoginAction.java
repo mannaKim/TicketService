@@ -29,7 +29,7 @@ public class LoginAction implements Action {
 		}else if(!mvo.getPwd().equals(pwd)) {
 			request.setAttribute("message", "비밀번호가 틀렸습니다.");
 		}else if(mvo.getPwd().equals(pwd)) {
-			url = "shop.do?command=index";
+			url = "ticket.do?command=index";
 			HttpSession session = request.getSession();
 			session.setAttribute("loginUser", mvo);
 		}else {
