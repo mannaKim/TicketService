@@ -41,9 +41,9 @@
 				<ul>
 					<li><a href="ticket.do?command=">전시소개</a></li>
 					<li><a href="ticket.do?command=">전시예약</a></li>
-					<li><a href="ticket.do?command=">전시후기</a></li>
+					<li><a href="ticket.do?command=review">전시후기</a></li>
 					<li><a href="ticket.do?command=goods">굿즈</a></li>
-					<li><a href="ticket.do?command=">Q &amp; A</a></li>
+					<li><a href="ticket.do?command=qna">Q &amp; A</a></li>
 				</ul>
 			</nav>
 		</header>

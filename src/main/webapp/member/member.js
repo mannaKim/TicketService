@@ -68,3 +68,22 @@ function idcheck(){
 	window.open(url,"IdCheck",opt);
 }
 
+function qna() {
+	location.href="ticket.do?command=qna";
+}
+
+function go_form(){
+	location.href="ticket.do?command=qnaWriteForm";
+}
+
+function go_write(){
+	location.href="ticket.do?command=qnaWrite";
+}
+
+function go_reform(){
+	location.href="ticket.do?command=reviewWriteForm";
+}
+
+function go_rewrite(){
+	location.href="ticket.do?command=reviewWrite";
+}

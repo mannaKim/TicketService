@@ -12,13 +12,8 @@
 				<th>문의종류</th>
 				<td colspan="5">
 					<select name="kind">
-						<c:forEach items="${kindList}" var="kind" varStatus="status">
-							<c:choose>
-								<c:when test="${productVO.kind==status.count}">
-									<option value="${status.count }" selected="selected">${kind}</option>
-								</c:when>
-							<c:otherwise><option value="${status.count}">${kind}</option></c:otherwise>
-							</c:choose>
+					<c:forEach items="${kindList}" var="kind" varStatus="status">
+							<option value="${status.count}">${kind }</option>
 						</c:forEach>
 						</select>
 					</td>
@@ -31,7 +26,7 @@
 				<tr><th>문의내용</th><td colspan="5">
 					<textarea name="content" ></textarea></td></tr>
 		</table>
-		<input class="btn" type="button" value="작성" onClick="q_write()">
+		<input class="btn" type="button" value="작성" onClick="go_write()">
 		<input class="btn" type="button" value="취소" 
 			onClick="location.href='ticket.do?command=qna'">
 		

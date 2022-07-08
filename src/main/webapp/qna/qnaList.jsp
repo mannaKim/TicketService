@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp" %>
 
+	<script src="member/member.js"></script>
 <article>
 <h2> 1:1 문의 </h2>
 <form method="post">
@@ -41,7 +42,7 @@
 <div  class="clear"></div><br>
 
 <div id="buttons">
-	<input type="button"  value="1:1 문의하기"  class="submit" onClick="test();"> 
+	<input type="button"  value="1:1 문의하기"  class="submit" onClick="go_form();"> 
 </div>
 <div  class="clear"></div><br>
 </form>
