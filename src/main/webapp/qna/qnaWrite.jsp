@@ -26,11 +26,12 @@
 				<tr><th>문의내용</th><td colspan="5">
 					<textarea name="content" ></textarea></td></tr>
 		</table>
-		<input class="btn" type="button" value="작성" onClick="go_write()">
-		<input class="btn" type="button" value="취소" 
+		<input class="btn" type="button" value="작성" onClick="return go_write();">
+		<input class="btn" type="button" value="취소" class="submit" 
 			onClick="location.href='ticket.do?command=qna'">
 		
 </form>
+
 </article>
 
 

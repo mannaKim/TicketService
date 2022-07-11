@@ -54,24 +54,29 @@ CREATE TABLE review
 );
 
 
-
 /* Comments */
 
 COMMENT ON COLUMN qna.rep IS '댓글 유무 확인';
 
+-- 외래키
+ALTER TABLE qna
+	ADD FOREIGN KEY (id)
+	REFERENCES member (id);
+
+select * from member;
 
 -- Qna 추가
 select * from qna;
 insert into qna (qseq, kind, subject, content, id) 
-values(qna_seq.nextval,'1', '전시 내역 관련 문의입니다', '전시 내역 보내주세요', 'id');
-insert into qna (qseq, subject, content, id) 
-values(qna_seq.nextval, '4', '굿즈 환불절차 안내부탁드려요', '환불하고 싶어요', 'id');
-insert into qna (qseq, subject, content, id) 
-values(qna_seq.nextval, '4', '굿즈 교환 하고 싶어요', '교환절차 안내부탁드려요', 'id');
-insert into qna (qseq, subject, content, id) 
-values(qna_seq.nextval, '2', '비밀번호 변경', '변경 적용이 안됩니다', 'id');
-insert into qna (qseq, subject, content, id) 
-values(qna_seq.nextval, '3', '예약 인원 언제 충원하나요?', 'id');
+values(qna_seq.nextval,'1', '전시 내역 관련 문의입니다', '전시 내역 보내주세요', 'scott');
+insert into qna (qseq, kind, subject, content, id) 
+values(qna_seq.nextval, '4', '굿즈 환불절차 안내부탁드려요', '환불하고 싶어요', 'scott');
+insert into qna (qseq, kind, subject, content, id) 
+values(qna_seq.nextval, '4', '굿즈 교환 하고 싶어요', '교환절차 안내부탁드려요', 'scott');
+insert into qna (qseq, kind, subject, content, id) 
+values(qna_seq.nextval, '2', '비밀번호 변경', '변경 적용이 안됩니다', 'scott');
+insert into qna (qseq, kind, subject, content, id) 
+values(qna_seq.nextval, '3', '예약 관련', '예약 인원 언제 충원하나요?', 'scott');
 
 -- review 추가
 select * from review;

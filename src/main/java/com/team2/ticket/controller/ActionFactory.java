@@ -10,6 +10,7 @@ import com.team2.ticket.controller.action.member.JoinFormAction;
 import com.team2.ticket.controller.action.member.LoginAction;
 import com.team2.ticket.controller.action.member.LoginFormAction;
 import com.team2.ticket.controller.action.member.LogoutAction;
+import com.team2.ticket.controller.action.member.QnaViewAction;
 import com.team2.ticket.controller.action.member.ShowTermAction;
 import com.team2.ticket.controller.action.member.TermsAndConditionsAction;
 import com.team2.ticket.controller.action.review.ReviewAction;
@@ -40,6 +41,7 @@ public class ActionFactory {
 		else if(command.equals("qna")) ac = new QnaAction();
 		else if(command.equals("qnaWriteForm")) ac = new QnaWriteFormAction();
 		else if(command.equals("qnaWrite")) ac = new QnaWriteAction();
+		else if(command.equals("qnaView")) ac = new QnaViewAction();
 		
 		else if(command.equals("reviewWriteForm")) ac = new ReviewWriteFormAction();
 		else if(command.equals("reviewWrite")) ac = new ReviewWriteAction();

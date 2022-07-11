@@ -77,7 +77,15 @@ function go_form(){
 }
 
 function go_write(){
-	location.href="ticket.do?command=qnaWrite";
+	if (document.formm.name.value == "") {
+		alert("제목을 입력해주세요"); 	    
+	    document.formm.name.focus();
+	} else if(document.formm.content.value == "") {
+	    alert("내용를 입력해 주세요.");	    
+	    document.formm.content.focus();
+	}  else{
+		return true;
+	}
 }
 
 function go_reform(){

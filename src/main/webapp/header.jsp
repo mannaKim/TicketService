@@ -43,8 +43,10 @@
 					<li><a href="ticket.do?command=">전시예약</a></li>
 					<li><a href="ticket.do?command=review">전시후기</a></li>
 					<li><a href="ticket.do?command=goods">굿즈</a></li>
-					<li><a href="ticket.do?command=qnaList">Q &amp; A</a></li>
+					<li><a href="#" onClick="qna();">Q &amp; A</a></li>
 					<li><a href="ticket.do?command=qna">Q &amp; A</a></li>
+					
+					<li><a href="#" onClick="go_form();">q&a 쓰기</a></li>
 				</ul>
 			</nav>
 		</header>

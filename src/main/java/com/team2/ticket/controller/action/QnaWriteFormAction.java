@@ -14,12 +14,12 @@ public class QnaWriteFormAction implements Action {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String url = "qna/qnaWrite.jsp";
-//		HttpSession session = request.getSession();
-//	    MemberVO mvo= (MemberVO) session.getAttribute("loginUser"); 
-//	    
-//	    if (mvo == null)
-//	    	url = "ticket.do?command=qna";	 
+		String url = "qna/qnaWrite.jsp";		
+		HttpSession session = request.getSession();
+	    MemberVO mvo= (MemberVO) session.getAttribute("loginUser"); 
+	    
+	    if (mvo == null)
+	    	url = "ticket.do?command=loginForm";	 
 	    	
 	    request.getRequestDispatcher(url).forward(request, response);
 

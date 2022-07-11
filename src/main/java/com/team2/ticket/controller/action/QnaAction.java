@@ -23,9 +23,9 @@ public class QnaAction implements Action {
 		HttpSession session = request.getSession();
 		MemberVO mvo = (MemberVO) session.getAttribute("loginUser");
 		if(mvo == null) {
-			url = "shop.do?command=loginForm";
+			url = "ticket.do?command=loginForm";
 		} else {
-			// 로그인한 아이디로 qna 목록을 조회하고 리턴받습니다 (메서드 이름 listQna)
+	
 			QnaDao qdao = QnaDao.getInstance();
 
 			Paging paging = new Paging();

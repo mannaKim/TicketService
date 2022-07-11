@@ -24,19 +24,21 @@ public class QnaDao {
 	
 	public void insertQna(QnaVO qvo) {
 		
-		String sql = "insert into qna (qseq, subject, content, id) "
-				+ " values(qna_seq.nextval , ? , ? , ? )";
+		String sql = "insert into qna (qseq, subject, content, kind, id) "
+				+ " values(qna_seq.nextval, ?, ?, ?, ? )";
 		con = Dbman.getConnection();
 		try {
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, qvo.getSubject());
 		    pstmt.setString(2, qvo.getContent());
-		    pstmt.setString(3, qvo.getId());
+		    pstmt.setString(3, qvo.getKind());
+		    pstmt.setString(4, "scott"); // 수정 필요
 		    pstmt.executeUpdate();  
 		} catch (SQLException e) {e.printStackTrace();
 		} finally {  Dbman.close(con, pstmt, rs);  }
-		
 	}
+	
+	
 
 
 	public int getAllCount(String id) {
@@ -84,4 +86,32 @@ public class QnaDao {
 		}
 		return list;
 	}
+
+
+	public QnaVO getQna(int qseq) {
+		QnaVO qvo = new QnaVO();
+		String sql = "select * from qna where qseq = ?";
+		con = Dbman.getConnection();
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1,  qseq);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				qvo.setQseq(qseq);
+				qvo.setSubject(rs.getString("subject"));
+				qvo.setContent(rs.getString("content"));
+				qvo.setId(rs.getString("id"));
+				qvo.setIndate(rs.getTimestamp("indate"));
+				qvo.setReply(rs.getString("reply"));
+				qvo.setRep(rs.getString("rep"));
+				qvo.setKind(rs.getString("kind"));
+			}
+		} catch (SQLException e) {e.printStackTrace();
+		} finally { Dbman.close(con, pstmt, rs);}
+		return qvo;
+	}
+
+
+
+
 }

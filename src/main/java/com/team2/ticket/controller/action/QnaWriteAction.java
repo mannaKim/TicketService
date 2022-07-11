@@ -16,23 +16,22 @@ public class QnaWriteAction implements Action {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-
 		String url = "ticket.do?command=qna"; // 목적지는  qnaList
 		
 		HttpSession session = request.getSession();
 	    MemberVO mvo = (MemberVO) session.getAttribute("loginUser");    
 	    
 	    if (mvo == null) {
-	    	url = "shop.do?command=index";
+	    	url = "ticket.do?command=index";
 	    }else{
 	    	QnaVO qvo = new QnaVO();
 	    	qvo.setSubject(request.getParameter("subject"));
 	    	qvo.setContent(request.getParameter("content"));
+	    	qvo.setContent(request.getParameter("kind"));
 	    	qvo.setId( mvo.getId() );
 	    	
 	    	QnaDao qdao = QnaDao.getInstance();
 	    	qdao.insertQna(qvo);
-	    	
 	    	
 	    }
 	    response.sendRedirect(url);
