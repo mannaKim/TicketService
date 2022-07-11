@@ -25,7 +25,7 @@ public class QnaAction implements Action {
 		if(mvo == null) {
 			url = "ticket.do?command=loginForm";
 		} else {
-	
+	 
 			QnaDao qdao = QnaDao.getInstance();
 
 			Paging paging = new Paging();
