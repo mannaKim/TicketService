@@ -9,7 +9,7 @@
 	<tr>	<th>번호</th><th>제목</th><th>등록일</th><th>답변 여부</th></tr>
 	<c:forEach items="${qnaList}"  var="qnaVO">
 		<tr ><td> ${qnaVO.qseq}</td>    
-    		<td><a href="shop.do?command=qnaView&qseq=${qnaVO.qseq}">${qnaVO.kind} &nbsp; ${qnaVO.subject}</a></td>      
+    		<td><a href="ticket.do?command=qnaView&qseq=${qnaVO.qseq}">${qnaVO.kind} &nbsp; ${qnaVO.subject}</a></td>      
        		<td><fmt:formatDate value="${qnaVO.indate}" type="date"/></td>
        		<td><c:choose>
 				<c:when test="${qnaVO.rep==1}"> no </c:when>
@@ -21,7 +21,7 @@
 <div class="clear"></div>
 
 <div id="paging" >
-	<c:url var="action" value="shop.do?command=qnaList" />
+	<c:url var="action" value="ticket.do?command=qnaList" />
 	<c:if test="${paging.prev}">
 		<a href="${action}&page=${paging.beginPage-1}">◀</a>&nbsp;
 	</c:if>

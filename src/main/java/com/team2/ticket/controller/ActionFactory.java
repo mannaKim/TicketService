@@ -37,7 +37,6 @@ public class ActionFactory {
 		else if(command.equals("joinForm")) ac = new JoinFormAction();
 		else if(command.equals("idCheckForm")) ac = new IdCheckFormAction();
 		
-		
 		else if(command.equals("qna")) ac = new QnaAction();
 		else if(command.equals("qnaWriteForm")) ac = new QnaWriteFormAction();
 		else if(command.equals("qnaWrite")) ac = new QnaWriteAction();
